@@ -24,15 +24,15 @@ namespace Clientes
             {
                 Console.WriteLine("Ingrese la fecha actual del servidor en el formato yyyy-MM-dd-HH-mm-ss");
                 string fechaFormat = Console.ReadLine().Trim();
-                string[] formatos = fechaFormat.Split('-');
+                string[] formato = fechaFormat.Split('-');
                 try
                 {
-                    año = formatos[0];
-                    mes = formatos[1];
-                    dia = formatos[2];
-                    hora = formatos[3];
-                    minuto = formatos[4];
-                    segundo = formatos[5];
+                    año = formato[0];
+                    mes = formato[1];
+                    dia = formato[2];
+                    hora = formato[3];
+                    minuto = formato[4];
+                    segundo = formato[5];
                     fecha = año + "-" + mes + "-" + dia + " " + hora + ":" + minuto + ":" + segundo;
                 }
                 catch (Exception ex)
