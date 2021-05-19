@@ -25,10 +25,10 @@ namespace ServicioComunicacionModel.DAL
         public List<MedidorTrafico> ObtenerMedidores()
         {
             List<MedidorTrafico> medidorTrafico = new List<MedidorTrafico>();
-            MedidorTrafico mt1 = new MedidorTrafico(1, 1);
-            MedidorTrafico mt2 = new MedidorTrafico(2, 2);
-            MedidorTrafico mt3 = new MedidorTrafico(3, 3);
-            MedidorTrafico mt4 = new MedidorTrafico(4, 4);
+            MedidorTrafico mt1 = new MedidorTrafico(1, 001);
+            MedidorTrafico mt2 = new MedidorTrafico(2, 002);
+            MedidorTrafico mt3 = new MedidorTrafico(3, 003);
+            MedidorTrafico mt4 = new MedidorTrafico(4, 004);
             medidorTrafico.Add(mt1);
             medidorTrafico.Add(mt2);
             medidorTrafico.Add(mt3);

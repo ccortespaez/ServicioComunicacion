@@ -81,46 +81,46 @@ namespace Clientes
 
         public static int GetValor()
         {
-            int aux = -1;
+            int opcion = -1;
             do
             {
                 Console.WriteLine("Ingresar valor");
-                if (!int.TryParse(Console.ReadLine().Trim(), out aux))
+                if (!int.TryParse(Console.ReadLine().Trim(), out opcion))
                 {
                     Console.WriteLine("El valor debe ser numerico");
-                    aux = -1;
+                    opcion = -1;
                 }
-                else if (aux < 0 || aux > 1000)
+                else if (opcion < 0 || opcion > 1000)
                 {
                     Console.WriteLine("El valor debe ser entre 0 y 1000");
-                    aux = -1;
+                    opcion = -1;
                 }
 
-            } while (aux == -1);
-            return aux;
+            } while (opcion == -1);
+            return opcion;
         }
 
         public static int GetEstado()
         {
-            int aux = -1;
+            int opcion = -1;
             do
             {
-                Console.WriteLine("¿Ingresar Estado?");
+                Console.WriteLine("Ingrese un estado");
                 Console.WriteLine("1. Si");
                 Console.WriteLine("2. No");
-                if (!int.TryParse(Console.ReadLine().Trim(), out aux))
+                if (!int.TryParse(Console.ReadLine().Trim(), out opcion))
                 {
-                    Console.WriteLine("La confirmacion debe ser numerica");
-                    aux = -1;
+                    Console.WriteLine("Error al ingresar, la seleccion debe ser 1 o 2");
+                    opcion = -1;
                 }
-                else if (aux != 1 && aux != 2)
+                else if (opcion != 1 && opcion != 2)
                 {
-                    Console.WriteLine("La confirmacion debe ser 1 o 2");
-                    aux = -1;
+                    Console.WriteLine("Error al ingresar, la seleccion debe ser 1 o 2");
+                    opcion = -1;
                 }
 
-            } while (aux == -1);
-            return aux;
+            } while (opcion == -1);
+            return opcion;
         }
 
         
@@ -134,12 +134,12 @@ namespace Clientes
                 Console.WriteLine("2. Consumo");
                 if (!int.TryParse(Console.ReadLine().Trim(), out opcion))
                 {
-                    Console.WriteLine("El tipo de medidor debe ser numerico");
+                    Console.WriteLine("Error al ingresar, la seleccion debe ser 1 o 2");
                     opcion = -1;
                 }
                 else if (opcion != 1 && opcion != 2)
                 {
-                    Console.WriteLine("El tipo de medidor deber ser 1 o 2");
+                    Console.WriteLine("Error al ingresar, la seleccion debe ser 1 o 2");
                     opcion = -1;
                 }
             } while (opcion != 1 && opcion != 2);
@@ -148,28 +148,28 @@ namespace Clientes
 
         public static int GetSeleccion()
         {
-            int aux = -2;
+            int opcion = -2;
             do
             {
-                Console.WriteLine("Seleccione estado");
+                Console.WriteLine("Seleccione un tipo de estado");
                 Console.WriteLine("-1. Error de lectura");
                 Console.WriteLine("0. OK");
                 Console.WriteLine("1. Punto de carga lleno");
                 Console.WriteLine("2. Requiere mantencion preventiva");
-                if (!int.TryParse(Console.ReadLine().Trim(), out aux))
+                if (!int.TryParse(Console.ReadLine().Trim(), out opcion))
                 {
-                    Console.WriteLine("El Estado debe ser numerico");
-                    aux = -2;
+                    Console.WriteLine("Error al ingresar, el estado debe ser -1, 0, 1 o 2");
+                    opcion = -2;
                 }
-                else if (aux != -1 && aux != 0 && aux != 1 && aux != 2)
+                else if (opcion != -1 && opcion != 0 && opcion != 1 && opcion != 2)
                 {
-                    Console.WriteLine("Debe seleccionar un estado de la lista");
-                    aux = -2;
+                    Console.WriteLine("Error al ingresar debe seleccionar un estado existente en la lista");
+                    opcion = -2;
                 }
 
 
-            } while (aux == -2);
-            return aux;
+            } while (opcion == -2);
+            return opcion;
         }
 
 
@@ -182,7 +182,7 @@ namespace Clientes
             Console.WriteLine("Conectando al servidor {0} en el puerto {1}", ip, puerto);
             if (clienteSocket.Conectar())
             {
-                Console.WriteLine("Cliente Conectado");
+                Console.WriteLine("Cliente conectado con exito");
                 int tipo = GetTipo();
                 string fecha = GetFecha();
                 int nroMedidor = GetNroMedidor();
@@ -230,7 +230,7 @@ namespace Clientes
                 }
                 else
                 {
-                    Console.WriteLine("Rrror al actualizar");
+                    Console.WriteLine("Error al actualizar");
                     clienteSocket.Desconectar();
                 }
             }

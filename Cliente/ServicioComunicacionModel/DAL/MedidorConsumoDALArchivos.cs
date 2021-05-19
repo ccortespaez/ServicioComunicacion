@@ -24,10 +24,10 @@ namespace ServicioComunicacionModel.DAL
         public List<MedidorConsumo> ObtenerMedidores()
         {
             List<MedidorConsumo> medidorConsumo = new List<MedidorConsumo>();
-            MedidorConsumo mc1 = new MedidorConsumo(1, 1);
-            MedidorConsumo mc2 = new MedidorConsumo(2, 2);
-            MedidorConsumo mc3 = new MedidorConsumo(3, 3);
-            MedidorConsumo mc4 = new MedidorConsumo(4, 4);
+            MedidorConsumo mc1 = new MedidorConsumo(1, 001);
+            MedidorConsumo mc2 = new MedidorConsumo(2, 002);
+            MedidorConsumo mc3 = new MedidorConsumo(3, 003);
+            MedidorConsumo mc4 = new MedidorConsumo(4, 004);
             medidorConsumo.Add(mc1);
             medidorConsumo.Add(mc2);
             medidorConsumo.Add(mc3);
