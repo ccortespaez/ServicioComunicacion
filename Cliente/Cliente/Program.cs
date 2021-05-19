@@ -70,7 +70,7 @@ namespace Clientes
             do
             {
                 Console.WriteLine("Ingresar Numero de Serie");
-                if (!int.TryParse(Console.ReadLine().Trim(), out aux))
+                if (!int.TryParse(Console.ReadLine().Trim(), out opcion))
                 {
                     Console.WriteLine("El numero de serie debe ser numerico");
                     opcion = -1;

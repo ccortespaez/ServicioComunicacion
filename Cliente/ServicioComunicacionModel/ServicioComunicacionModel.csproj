@@ -50,10 +50,17 @@
     <Compile Include="DAL\MedidorConsumoFactory.cs" />
     <Compile Include="DAL\MedidorTraficoDALArchivos.cs" />
     <Compile Include="DAL\MedidorTraficoFactory.cs" />
+    <Compile Include="DAO\Ciudad.cs" />
+    <Compile Include="DAO\Direccion.cs" />
+    <Compile Include="DAO\EstacionServicio.cs" />
     <Compile Include="DAO\Lectura.cs" />
     <Compile Include="DAO\Medidor.cs" />
     <Compile Include="DAO\MedidorConsumo.cs" />
     <Compile Include="DAO\MedidorTrafico.cs" />
+    <Compile Include="DAO\PuntoCarga.cs" />
+    <Compile Include="DAO\Region.cs" />
+    <Compile Include="DAO\TarifaElectrica.cs" />
+    <Compile Include="DAO\ZonaHoraria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
